@@ -174,7 +174,11 @@ public class MusicControls extends CordovaPlugin {
 
 			this.cordova.getThreadPool().execute(new Runnable() {
 				public void run() {
-					notification.updateNotification(infos);
+					try {
+						notification.updateNotification(infos);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 					
 					// track title
 					metadataBuilder.putString(MediaMetadataCompat.METADATA_KEY_TITLE, infos.track);
