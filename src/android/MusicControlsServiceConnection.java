@@ -35,6 +35,6 @@ public class MusicControlsServiceConnection implements ServiceConnection {
             }
         } catch (Exception ex) {
             return;
-		}
+	}
     }
 }
