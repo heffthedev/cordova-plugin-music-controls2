@@ -10,7 +10,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Notification;
-import android.bluetooth.BluetoothDevice;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -68,10 +67,6 @@ public class MusicControls extends CordovaPlugin {
 
 		// Listen for headset plug/unplug
 		context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
-		
-		// Listen for additional bluetooth device events
-		context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(BluetoothDevice.ACTION_ACL_CONNECTED));
-		context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED));
 		
 		// Listen for bluetooth connection state changes
 		context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(android.bluetooth.BluetoothHeadset.ACTION_CONNECTION_STATE_CHANGED));
