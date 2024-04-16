@@ -59,25 +59,25 @@ public class MusicControls extends CordovaPlugin {
 	private void registerBroadcaster(MusicControlsBroadcastReceiver mMessageReceiver){
 		final Context context = this.cordova.getActivity().getApplicationContext();
 		// context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-previous"));
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-previous"), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-previous"), ContextCompat.RECEIVER_NOT_EXPORTED);
 		// context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-pause"), RECEIVER_NOT_EXPORTED);
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-pause"), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-pause"), ContextCompat.RECEIVER_NOT_EXPORTED);
 		// context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-play"), RECEIVER_NOT_EXPORTED);
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-play"), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-play"), ContextCompat.RECEIVER_NOT_EXPORTED);
 		// context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-next"), RECEIVER_NOT_EXPORTED);
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-next"), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-next"), ContextCompat.RECEIVER_NOT_EXPORTED);
 		// context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-media-button"), RECEIVER_NOT_EXPORTED);
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-media-button"), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-media-button"), ContextCompat.RECEIVER_NOT_EXPORTED);
 		// context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-destroy"), RECEIVER_NOT_EXPORTED);
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-destroy"), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter("music-controls-destroy"), ContextCompat.RECEIVER_NOT_EXPORTED);
 		
 		// Listen for headset plug/unplug
 		//context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG), RECEIVER_NOT_EXPORTED);
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG), ContextCompat.RECEIVER_NOT_EXPORTED);
 				
 		// Listen for bluetooth connection state changes
 		// context.registerReceiver((BroadcastReceiver)mMessageReceiver, new IntentFilter(android.bluetooth.BluetoothHeadset.ACTION_CONNECTION_STATE_CHANGED), RECEIVER_NOT_EXPORTED);
-		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter(android.bluetooth.BluetoothHeadset.ACTION_CONNECTION_STATE_CHANGED), ContextCompat.RECEIVER_NOT_EXPORTED)
+		ContextCompat.registerReceiver(context, (BroadcastReceiver)mMessageReceiver, new IntentFilter(android.bluetooth.BluetoothHeadset.ACTION_CONNECTION_STATE_CHANGED), ContextCompat.RECEIVER_NOT_EXPORTED);
 	}
 
 	// Register pendingIntent for broacast
